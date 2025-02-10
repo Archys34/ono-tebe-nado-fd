@@ -1,1 +1,436 @@
-/* место для вашего кода */
+/* Вся шапка */
+.header {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  align-items: center;
+  padding: 0;
+  width: 1100px;
+  height: 293px;
+  font-family: "Raleway", sans-serif; /* я так понял шрифт на странице один и тот же, но это не точно*/
+}
+
+/* Контейнер навигации */
+.header__menu {
+  display: flex;
+  width: 391.48px;
+  height: 22px;
+  padding: 0;
+}
+
+/*контейнер со ссылками меню слева от логотипа*/
+.header__links-list {
+  display: flex;
+  align-items: center;
+  justify-items: end;
+  margin-left: 49px;
+  list-style-type: circle;
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.13px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-top: -3px;
+  justify-content: space-between;
+  max-width: 391.48px;
+  max-height: 22px;
+  gap: 30px;
+}
+
+/*логотип по центру в шапке*/
+.header__logo-image {
+  display: flex;
+  align-items: center;
+  width: 148px;
+  height: 105px;
+  background-image: url("../images/logo-black.svg");
+  background-repeat: no-repeat;
+  background-size: contain; /* вообще так делать не советуют но без этого свойства чет не работает*/
+  background-repeat: no-repeat; /* Чтобы картинка не повторялась */
+  background-position: center center; /* Разместит картинку по центру */
+  padding: 0;
+}
+
+/* Ссылки в шапке */
+.header__link {
+  color: #333;
+  font-weight: 100;
+  gap: 15px; /* Отступ между ссылками */
+  white-space: nowrap; /* на всякий что бы не переносились ссылки в других разрешениях браузера*/
+  align-items: left; /* Выравниваем элементы по вертикали */
+  padding: 0;
+  width: 391.48px;
+  height: 22px;
+  font-size: 18px;
+  line-height: 21.13px;
+  word-spacing: 10px;
+  font-weight: 100;
+}
+
+.header__menu-main {
+  text-decoration: none; /* Убираем подчеркивание для меню главное */
+  list-style: none; /* Убираем маркеры списка */
+}
+
+/* Контейнер с адресом */
+.address {
+  font-style: normal; /* Убираем наклонный стиль */
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-right: 89px;
+  margin-top: -10px;
+  justify-self: end; /*выравниваем как сказано в рекоммендациях*/
+  padding: 0;
+  text-decoration: none;
+  color: black;
+  word-spacing: normal;
+  font-weight: 100;
+  font-size: 18px;
+  gap: 5px;
+}
+
+.phone_address {
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: 1px solid black;
+  padding-bottom: 2px;
+  width: max-content; /* Подчеркивание будет точно по размеру текста */
+}
+
+.cover {
+  display: flex;
+  width: 1100px;
+  height: 757px; /* вместо max-width max-height мы фиксируем высоту */
+  padding: 0;
+  border: 0;
+  background-image: url(../images/cover.jpg);
+  background-size: cover;
+  background-position: center; /* картинка всегда в центе */
+  object-fit: cover; /*что бы картинка не растягивалась и не уходила за рамки флекс-бокса*/
+  color: black;
+  background-color: rgba(0, 0, 0, 0.6); /* Затемняющий слой */
+  background-blend-mode: multiply;
+}
+
+.cover_text {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-grow: 1;
+  flex-direction: column;
+  max-width: 100%;
+  width: 100%;
+  padding: 48px;
+  row-gap: 20px;
+  margin-top: 118px;
+  color: #ffffff;
+}
+
+.ono {
+  order: 1;
+  text-align: start;
+  font-family: Raleway;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 115px;
+  letter-spacing: 0.3em;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  text-transform: uppercase;
+}
+
+.tebe {
+  order: 2;
+  margin-left: 2vh;
+  text-align: center;
+  font-family: Raleway;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 115px;
+  letter-spacing: 0.3em;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  text-transform: uppercase;
+}
+
+.nado {
+  order: 3;
+  margin-right: -2vh;
+  text-align: end;
+  text-transform: uppercase;
+  font-family: Raleway;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 115px;
+  letter-spacing: 0.3em;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.slogan {
+  width: 637px;
+  order: 4;
+  text-wrap: nowrap;
+  text-transform: uppercase;
+  font-family: Raleway;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 28px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #000000;
+  word-spacing: 19px;
+  margin-top: 86px;
+  color: #ffffff;
+}
+
+/*кнопка СДЕЛАТЬ СТАВКУ на главной странцие со слоганом ОНО ТЕБЕ НАДО*/
+.button_bid {
+  margin-left: 80px;
+  order: 5;
+  border: 1px;
+  border-color: #ffffff;
+  width: 256px;
+  height: 51px;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+}
+
+/*само поле карточек - т.е. все поле где все карточки лоты */
+.lots_field {
+  display: grid;
+  /* Будет создано 3 колонки */
+  grid-template-columns: 334px 334px 334px;
+  /* Будет создано 4 ряда первый для слова ЛОТЫ второй - для заголовка карточки, третий - для текста карточки, четветый для ссылки "посмотреть еще" */
+  grid-template-rows: 74px 180px 415px 25px;
+  margin-top: 181px;
+  column-gap: 25px;
+}
+
+/*заглавие блока ЛОТЫ - прям так и написано ЛОТЫ*/
+.lots_block_name {
+  margin-left: 5vh;
+  text-align: start;
+  grid-row: 1/1;
+  grid-column: 1/4;
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 46.96px;
+  text-transform: uppercase;
+}
+/*любая карточка блока лоты с текстом и тайтлом - блок одной карточки лоты*/
+.lots {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  width: 334px;
+  height: 596px;
+  padding: 0px;
+  margin-left: 24px;
+}
+
+/*заглавие статьи в самой карточке*/
+.lost_card_header {
+  color: #ffffff;
+  margin-top: 48px;
+  margin-left: 40px;
+  margin-right: 40px;
+  text-align: left;
+  text-transform: uppercase;
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26.4px;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: Auto;
+}
+
+/*текст самой карточки без заголовка в блоке ЛОТЫ*/
+.lots_card-text {
+  color: #ffffff;
+  margin-bottom: 49px;
+  margin-left: 40px;
+  margin-right: 40px;
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+/*Назначение колонки определенному автору, ассоциационирование с картинкой*/
+.Thomas_Anderson {
+  grid-column-start: 1;
+  background-image: url(../images/card-lot-01.jpg);
+  background-size: cover;
+  background-position: center; /* картинка всегда в центе */
+  background-color: rgba(0, 0, 0, 0.6); /* Затемняющий слой */
+  background-blend-mode: multiply; /* Затемнение только изображения */
+}
+
+.James_Jones {
+  grid-column-start: 2;
+  background-image: url(../images/card-lot-02.jpg);
+  background-size: cover;
+  background-position: center; /* картинка всегда в центе */
+  background-color: rgba(0, 0, 0, 0.6); /* Затемняющий слой */
+  background-blend-mode: multiply; /* Затемнение только изображения */
+}
+
+.Kandidsky {
+  grid-column-start: 3;
+  background-image: url(../images/card-lot-03.jpg);
+  background-size: cover;
+  background-position: center; /* картинка всегда в центе */
+  background-color: rgba(0, 0, 0, 0.6); /* Затемняющий слой */
+  background-blend-mode: multiply; /* Затемнение только изображения */
+}
+
+/*ссылка под карточками*/
+.lots_link-more {
+  margin-top: 32px;
+  grid-row-start: 4;
+  text-align: center;
+  font-weight: 400;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+/*секция about--------------------------------------------------------*/
+.about {
+  margin-top: 120px;
+  display: grid;
+  /* Будет создано 2 колонки */
+  grid-template-columns: 382px 690px;
+  /* Будет создано 2 ряда */
+  grid-template-rows: 310px 1fr;
+  max-width: 1052px;
+}
+
+.about__logo-image {
+  width: 60%; /* Регулируем размер изображения */
+  height: auto;
+  object-fit: contain; /* не обрезает вписанное изображение */
+}
+
+.about__title {
+  margin-top: 165px;
+  grid-row-start: 1;
+  grid-column-start: 2;
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 46.96px;
+  text-transform: uppercase;
+}
+
+.about__text {
+  grid-row: 2;
+  grid-column: 2;
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+
+.about__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  background-color: #000000;
+  border-radius: 50%; /* Делаем круг */
+  overflow: hidden;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  margin-top: 63px;
+  margin-left: 71px;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 354px 405px auto;
+  grid-template-rows: 180px;
+  max-width: 1100px;
+  margin-top: 172px;
+  padding: 0;
+}
+
+.footer_address {
+  margin-left: 45px;
+  font-style: normal; /* Убираем наклонный стиль */
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-self: end;
+  padding: 0;
+  text-decoration: none;
+  color: black;
+  word-spacing: normal;
+  font-weight: 100;
+  font-size: 18px;
+  gap: 5px;
+}
+
+.footer_menu {
+  display: flex;
+  justify-items: center;
+  align-items: start;
+  width: 391.48px;
+  padding: 0;
+  text-align: center;
+  justify-content: center;
+}
+
+.footer__links-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  height: 180px;
+  width: 397px;
+  list-style-type: none;
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 400;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.footer__social-list {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.footer__social-icon {
+  width: 48px;
+  height: 48px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+}
+
+.youtube {
+  background-image: url(../images/yt.svg);
+}
+
+.vkontakte {
+  background-image: url(../images/vk.svg);
+}
+
+.pinterest {
+  background-image: url(../images/pinterest.svg);
+}
