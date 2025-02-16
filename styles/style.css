@@ -6,7 +6,7 @@
   padding: 0;
   width: 1100px;
   height: 293px;
-  font-family: "Raleway", sans-serif; /* я так понял шрифт на странице один и тот же, но это не точно*/
+  font-family: "Raleway", sans-serif;
 }
 
 /* Контейнер навигации */
@@ -36,6 +36,7 @@
   max-width: 391.48px;
   max-height: 22px;
   gap: 30px;
+  white-space: nowrap;
 }
 
 /*логотип по центру в шапке*/
@@ -50,22 +51,6 @@
   background-repeat: no-repeat; /* Чтобы картинка не повторялась */
   background-position: center center; /* Разместит картинку по центру */
   padding: 0;
-}
-
-/* Ссылки в шапке */
-.header__link {
-  color: #333;
-  font-weight: 100;
-  gap: 15px; /* Отступ между ссылками */
-  white-space: nowrap; /* на всякий что бы не переносились ссылки в других разрешениях браузера*/
-  align-items: left; /* Выравниваем элементы по вертикали */
-  padding: 0;
-  width: 391.48px;
-  height: 22px;
-  font-size: 18px;
-  line-height: 21.13px;
-  word-spacing: 10px;
-  font-weight: 100;
 }
 
 .header__menu-main {
@@ -91,7 +76,7 @@
   font-size: 18px;
   gap: 5px;
 }
-
+/*стили телефонного адреса подчеркивание - заменено как в макете*/
 .phone_address {
   text-decoration: none;
   display: inline-block;
@@ -99,6 +84,8 @@
   padding-bottom: 2px;
   width: max-content; /* Подчеркивание будет точно по размеру текста */
 }
+
+/*___________ПОЛЕ ОНО ТЕБЕ НАДО (заголовок с картинкой)______________*/
 
 .cover {
   display: flex;
@@ -128,7 +115,7 @@
   color: #ffffff;
 }
 
-.ono {
+.cover_title_top {
   order: 1;
   text-align: start;
   font-family: Raleway;
@@ -141,7 +128,7 @@
   text-transform: uppercase;
 }
 
-.tebe {
+.cover_title_middle {
   order: 2;
   margin-left: 2vh;
   text-align: center;
@@ -155,7 +142,7 @@
   text-transform: uppercase;
 }
 
-.nado {
+.cover_title_bottom {
   order: 3;
   margin-right: -2vh;
   text-align: end;
@@ -169,7 +156,7 @@
   text-decoration-skip-ink: none;
 }
 
-.slogan {
+.description {
   width: 637px;
   order: 4;
   text-wrap: nowrap;
@@ -187,6 +174,7 @@
 }
 
 /*кнопка СДЕЛАТЬ СТАВКУ на главной странцие со слоганом ОНО ТЕБЕ НАДО*/
+
 .button_bid {
   margin-left: 80px;
   order: 5;
@@ -201,7 +189,8 @@
   padding: 10px 20px;
 }
 
-/*само поле карточек - т.е. все поле где все карточки лоты */
+/*________________ПОЛЕ КАРТОЧЕК____________________*/
+
 .lots_field {
   display: grid;
   /* Будет создано 3 колонки */
@@ -214,6 +203,7 @@
 
 /*заглавие блока ЛОТЫ - прям так и написано ЛОТЫ*/
 .lots_block_name {
+  display: grid;
   margin-left: 5vh;
   text-align: start;
   grid-row: 1/1;
@@ -225,16 +215,15 @@
   text-transform: uppercase;
 }
 /*любая карточка блока лоты с текстом и тайтлом - блок одной карточки лоты*/
-.lots {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.lots { 
   grid-row-start: 2;
   grid-row-end: 3;
   width: 334px;
   height: 596px;
   padding: 0px;
   margin-left: 24px;
+  text-decoration: none; /* Убираем подчеркивание для меню главное */
+  list-style: none; /* Убираем маркеры списка */
 }
 
 /*заглавие статьи в самой карточке*/
@@ -266,10 +255,12 @@
   line-height: 24px;
   grid-row-start: 2;
   grid-row-end: 3;
+  text-decoration: none; /* Убираем подчеркивание для меню главное */
+  list-style: none; /* Убираем маркеры списка */
 }
 
 /*Назначение колонки определенному автору, ассоциационирование с картинкой*/
-.Thomas_Anderson {
+.lot_card-left {
   grid-column-start: 1;
   background-image: url(../images/card-lot-01.jpg);
   background-size: cover;
@@ -278,7 +269,7 @@
   background-blend-mode: multiply; /* Затемнение только изображения */
 }
 
-.James_Jones {
+.lot_card-central {
   grid-column-start: 2;
   background-image: url(../images/card-lot-02.jpg);
   background-size: cover;
@@ -287,7 +278,7 @@
   background-blend-mode: multiply; /* Затемнение только изображения */
 }
 
-.Kandidsky {
+.lot_card-right {
   grid-column-start: 3;
   background-image: url(../images/card-lot-03.jpg);
   background-size: cover;
@@ -365,22 +356,6 @@
   max-width: 1100px;
   margin-top: 172px;
   padding: 0;
-}
-
-.footer_address {
-  margin-left: 45px;
-  font-style: normal; /* Убираем наклонный стиль */
-  font-family: "Raleway", sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-self: end;
-  padding: 0;
-  text-decoration: none;
-  color: black;
-  word-spacing: normal;
-  font-weight: 100;
-  font-size: 18px;
-  gap: 5px;
 }
 
 .footer_menu {
