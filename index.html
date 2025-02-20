@@ -14,8 +14,8 @@
     <header class="header">
       <!--МЕНЮ-->
       <nav class="header__menu">
-        <ul class="header__links-list">
-          <li class="header__menu-main"><a href ="index.html">главная</a></li>
+        <ul class="links-list">
+          <li class="active_link"><a href ="index.html" class="active_link">главная</a></li>
           <li><a href = "/lots">посмотреть лоты</a></li>
           <li><a href = "/about">об аукционе</a></li>
         </ul>
@@ -33,7 +33,7 @@
     </header>
     <main>
       <!--ПОЛЕ ОНО ТЕБЕ НАДО (заголовок с картинкой)-->
-      <section class="cover">
+      <section class="cover fogging_lesn">
         <div class="cover_text">
           <h1>
             <span class="cover_title_top">оно</span>
@@ -50,15 +50,15 @@
       <section class="lots_field">
         <h2 class="lots_block_name">лоты</h2>
         <ul class="lots">
-          <a href="#" alt="lot"><!--оборачиваем в ссылку-->
-            <li class="lots lot_card-left">
+          <a href="#" alt="lot" class="nounderline"><!--оборачиваем в ссылку-->
+            <li class="lots lot_card-first fogging_lesn">
               <h3 class ="lost_card_header">Фильм режиссёра, который бросил киношколу</h3>
               <p class="lots_card-text">Не просто бросил, а ушёл с первой лекции. Какой была бы ваша ставка, если бы вы не знали, 
                 что режиссёр — Пол Томас Андерсон?</p>
             </li>
           </a>
-          <a href="#" alt="lot"><!--оборачиваем в ссылку-->
-            <li class="lots lot_card-central">
+          <a href="#" alt="lot" class="nounderline"><!--оборачиваем в ссылку-->
+            <li class="lots lot_card-second fogging_lesn">
               <h3 class ="lost_card_header">Книга, где описан один скучный день из жизни рекламного агента</h3>
               <p class="lots_card-text">Объёмом почти в тысячу страниц. 
                 Иногда без знаков препинания и с переходами на древнеанглийский. 
@@ -67,29 +67,46 @@
                 Сколько бы вы поставили на «Улисса» Джеймса Джойса?</p>
             </li>
           </a>
-          <a href="#" alt="lot"><!--оборачиваем в ссылку-->
-            <li class="lots lot_card-right">
+          <a href="#" alt="lot" class="nounderline"><!--оборачиваем в ссылку-->
+            <li class="lots lot_card-third fogging_lesn">
               <h2 class ="lost_card_header">Картина, которую повторит даже 5-летний сын маминой подруги</h2>
               <p class="lots_card-text">Ну действительно, там линия, тут кружочек, а здесь и вовсе что-то похожее на инфузорию-туфельку. 
                 Никаких полей, лесов, котиков... Сколько бы вы на такое поставили, если бы не знали, 
                 что это — одна из революционных работ Кандинского?</p>
             </li></a>
           </ul> 
+        </div> 
+        <a href="#" class="lots_link-more">посмотреть больше</a> 
+        </div>
       </section>
+      <!--ABOUT-->
+      <section class="about"> 
+        <div class="about__logo"> <img src="images/logo-white.svg" alt="Логотип" class="about__logo-image"></div> 
+        <h1 class="about__title">Об аукционе</h1> 
+        <h3 class="about_first-paragraph"> 
+            Здесь вы не встретите очередное пафосное собрание невероятно дорогого антиквариата.  
+            Наши лоты вообще не должны были попасть ни на один аукцион.  
+            Потому что кому нужен дневник девочки-подростка или картина, которую может нарисовать даже ребёнок?  
+            Кому нужны все эти странные вещи, созданные любителями? 
+        </h3>
+        <h3 class="about_second-paragraph">Слишком сложные или, наоборот, слишком простые. Опережающие своё время. В пух и прах растерзанные критиками. Непринятые и непонятые. Когда-то они казались просто неудачными. Но, несмотря<br> на критику, кажущуюся простоту или сложность, сейчас без этих лотов невозможно представить современную культуру. Когда в эти вещи не верил никто, продолжали верить их создатели. И сейчас эти лоты стали культовыми.
+        </h3> 
+        </h3> 
+      </section> 
     </main>
       <footer class="footer">
         <div>
-        <address class="address">
-          <a href="tel:+70000000">+9 999 555 55 55</a>
+        <address class="footer_adress">
+          <a href="tel:+99995555555" class="phone_address">+9 999 555 55 55</a>
           <a href="mailto:info@sobaka.ge">info@sobaka.ge</a>
-          наб. Принсенграхт 263- 265, Амстердам
+          <a href="https://yandex.ru/maps/?pt=4.910146,52.364617&z=16&l=map">наб. Принсенграхт 263- 265, Амстердам</a>
           </address>
         </div>
         <nav class="footer_menu">
           <ul class="footer__links-list">
-            <li><a href ="index.html" class="header__link header__menu-main">главная</a></li>
-            <li><a href = "/lots" class="header__link">посмотреть лоты</a></li> <!--добавь ссылку на лоты-->
-            <li><a href = "/about" class="header__link">об аукционе</a></li> <!--добавь ссылку about-->
+            <li><a href ="index.html" class="active_link">главная</a></li>
+            <li><a href = "/lots">посмотреть лоты</a></li> <!--добавь ссылку на лоты-->
+            <li><a href = "/about">об аукционе</a></li> <!--добавь ссылку about-->
           </ul>
         </nav>
         <div class="footer__social-list">
