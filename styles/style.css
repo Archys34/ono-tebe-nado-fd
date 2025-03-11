@@ -1,4 +1,3 @@
-/* Вся шапка */
 .header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
@@ -50,6 +49,7 @@
   padding: 0;
 }
 
+/*декорируем ссылки*/
 .active_link {
   text-decoration: none; /* Убираем подчеркивание для меню главное */
   list-style: none; /* Убираем маркеры списка */
@@ -87,7 +87,6 @@
   background-position: center; /* картинка всегда в центе */
   object-fit: cover; /*что бы картинка не растягивалась и не уходила за рамки флекс-бокса*/
   color: black;
-  
   min-height: 757px;
   margin-top: 96px;
 }
@@ -176,7 +175,6 @@
 }
 
 /*ПОЛЕ КАРТОЧЕК*/
-
 /*стилизация заглавие блока ЛОТЫ */
 .lots_block_name {
   margin-top: 181px;
@@ -195,15 +193,19 @@
   display: flex;
   flex-grow: 1;
   column-gap: 25px;
+  flex-wrap: wrap;
+  row-gap: 25px;
+  margin-left: 23px;
 }
 
+/*размеры карточек, позиционирование картинки и работа с фоном*/
 .lot_dimension {
   display:flex;
   min-height: 596px;
   width: 334px;
   height: 100%;
   background-size: cover;
-  background-position: center; /* картинка всегда в центе */
+  background-position: center; 
 }
 
 /*можно сделать через important в .lots_card-text но так как то удобнее - настройка убирает подчеркивание текста в карточке*/
@@ -213,7 +215,7 @@
   border-bottom: none;
   position: relative;
   flex-wrap: wrap;
-  }
+}
 
 /*заглавие статьи в самой карточке*/
 .lost_card_header {
@@ -245,17 +247,18 @@
   align-items: flex-end;
 }
 
-/*Назначение расположения карточки в грид-сетке, назначение фоновой картинки*/
-.lot_card-left {
-  margin-left: 23px;
+/*КАРТОЧКА с фотографией разговора двух людей*/
+.lot_card-conversation {
   background-image: url(../images/card-lot-01.jpg);
 }
 
-.lot_card-middle {
+/*КАРТОЧКА с обложкой книги*/
+.lot_card-book {
   background-image: url(../images/card-lot-02.jpg);
 }
 
-.lot_card-right {
+/*КАРТОЧКА с абстрактным рисунком*/
+.lot_card-abstract {
   background-image: url(../images/card-lot-03.jpg);
 }
 
@@ -271,7 +274,7 @@
   margin-bottom: 90px;
 }
 
-/*секция about*/
+/*секция ABOUT*/
 .about {
   display: grid;
   grid-template-columns: auto auto;
@@ -283,9 +286,9 @@
   width: 60%; /* размер изображения */
   height: auto;
   object-fit: contain; /* не обрезает вписанное изображение */
-  
 }
 
+/*заглавие*/
 .about__title {
   margin-top: 165px;
   margin-left: 72px;
@@ -296,33 +299,25 @@
   font-size: 40px;
   line-height: 46.96px;
   text-transform: uppercase;
-  
 }
 
-.about_paragraph-start {
+.about_paragraph {
   margin-left: 71px;
   grid-column-start: 2;
   grid-row-start: 2;
-  grid-row-end: 2;
   font-family: Raleway, Arial, sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
-  margin-right: 30px;
+  margin-right: 28px;
   margin-top: 8px;
-} 
+  margin-bottom: 10px;
+}
 
-.about_paragraph-end {
-  margin-top: 23px;
-  margin-left: 71px;
-  grid-column-start: 2;
-  grid-row-start: 3;
-  font-family: Raleway, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-  margin-right: 25px;
-} 
+/*отступ между параграфами*/
+.about p {
+  margin-bottom: 24px;
+}
 
 .about__logo {
   grid-column-start: 1; /* Первая колонка */
@@ -341,13 +336,18 @@
   margin-left: 71px;
 }
 
+/*секция FOOTER*/
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr auto;
   grid-template-rows: 1fr;
   max-width: 1100px;
-  margin-top: 185px;
+  margin-top: 148px;
   padding: 0; 
+}
+
+.address_footer-alighment{
+  margin-right: 62px;
 }
 
 .footer_menu {
