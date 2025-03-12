@@ -45,20 +45,20 @@
   background-repeat: no-repeat;
   background-size: contain; /* вообще так делать не советуют но без этого свойства чет не работает*/
   background-repeat: no-repeat; /* Чтобы картинка не повторялась */
-  background-position: center center; /* Разместит картинку по центру */
+  background-position: center center; 
   padding: 0;
 }
 
 /*декорируем ссылки*/
 .active_link {
-  text-decoration: none; /* Убираем подчеркивание для меню главное */
-  list-style: none; /* Убираем маркеры списка */
+  text-decoration: none; 
+  list-style: none; 
 }
 
 /* Контейнер с адресом */
 .address {  
   width: 240px;
-  font-style: normal; /* Убираем наклонный стиль */
+  font-style: normal; 
   font-family: Raleway, Arial, sans-serif;
   display: flex;
   flex-direction: column;
@@ -72,6 +72,10 @@
   font-weight: 100;
   font-size: 18px;
   gap: 3px;
+}
+
+.address a {
+  text-decoration: none; 
 }
 
 /*___________ПОЛЕ ОНО ТЕБЕ НАДО (заголовок с картинкой)______________*/
@@ -92,7 +96,7 @@
 }
 
 .fogging_lesn {
-  background-color: rgba(0, 0, 0, 0.6); /* Затемняющий слой */
+  background-color: rgba(0, 0, 0, 0.6); /* затемняющий слой */
   background-blend-mode: multiply;
 }
 
@@ -330,7 +334,7 @@
   width: 240px;
   min-height: 240px;
   background-color: #000000;
-  border-radius: 50%; /* Делаем круг */
+  border-radius: 50%; /* делаем круг */
   overflow: hidden;
   margin-top: 63px;
   margin-left: 71px;
@@ -353,6 +357,7 @@
 .footer_menu {
   padding: 0;
   text-align: left;
+  margin-bottom: 115px;
 }
 
 .footer__links-list {
